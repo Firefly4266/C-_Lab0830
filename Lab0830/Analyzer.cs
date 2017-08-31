@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lab0830
 {
@@ -72,6 +73,18 @@ namespace Lab0830
             Regex reg = new Regex(@"[\s+]");
             Regex reg2 = new Regex(@"\W");
             wordStrings = reg.Split(sent.text);
+            //var alphaWord = from word in wordStrings
+            //               where word.Contains(" ")
+            //               orderby word descending
+            //               select word;
+            foreach ( var i in wordStrings)
+            System.Console.WriteLine(wordStrings.GetValue(0));
+
+            //foreach (var i in alphaWord)
+            //{
+            //    System.Console.WriteLine(i);
+            //}
+            //System.Console.WriteLine();
             foreach (string wd in wordStrings)
             {
                 sent.words.Add(new Wordref
@@ -82,6 +95,5 @@ namespace Lab0830
                 });
             }
         }
-
     }
 }
