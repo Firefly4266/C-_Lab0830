@@ -77,14 +77,12 @@ namespace Lab0830
                             where word.Contains("")
                             orderby word descending
                             select word;
-            //foreach ( var i in wordStrings)
-            //System.Console.WriteLine(wordStrings.GetValue(0));
-
             foreach (var i in alphaWord)
             {
                 System.Console.WriteLine(i);
             }
             System.Console.WriteLine();
+
             foreach (string wd in wordStrings)
             {
                 sent.words.Add(new Wordref
