@@ -24,9 +24,8 @@ namespace Lab0830
     }
 
     public class Analyzer
-    {
+    {//creates a list from input
         List<Paragraph> paragraphs = new List<Paragraph>();
-
         public void Analyze(string input)
         {
             SplitParagraphs(input);
@@ -36,7 +35,6 @@ namespace Lab0830
         void SplitParagraphs(string @in)
         {
             string[] paragraphStrings;
-
             Regex reg = new Regex("\r\n");
             paragraphStrings = reg.Split(@in);
             foreach (string pgstr in paragraphStrings)

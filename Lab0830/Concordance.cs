@@ -33,7 +33,6 @@ namespace Lab0830
             // Identify paragraphs and sentences
             // Identify words and their location
             anlz.Analyze(inputText);
-            Console.WriteLine("End of main");
         }
 
         static void ReadInputs()
